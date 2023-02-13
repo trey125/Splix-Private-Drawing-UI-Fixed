@@ -945,7 +945,7 @@ do
             --
             library.shared.initialized = true
             --
-            pcall(function() window:Watermark() end)
+            --pcall(function() window:Watermark() end) -- CAUSING ERROR WHEN UNLOADING
             window:KeybindsList()
             window:Cursor()
             --
