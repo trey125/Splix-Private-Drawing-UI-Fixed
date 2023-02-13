@@ -945,7 +945,7 @@ do
             --
             library.shared.initialized = true
             --
-            window:Watermark()
+            pcall(function() window:Watermark() end)
             window:KeybindsList()
             window:Cursor()
             --
