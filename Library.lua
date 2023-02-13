@@ -687,7 +687,7 @@ do
             spawn(function()
                 while wait(0.1) do
                     pcall(function() watermark_title.Text = string.format("$$ Splix || uid : %u || ping : %i || fps : %u", 1, tostring(library.shared.ping), library.shared.fps) end)
-                    window.watermark:UpdateSize()
+                    pcall(function() window.watermark:UpdateSize() end)
                 end
             end)
             --
