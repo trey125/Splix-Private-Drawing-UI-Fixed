@@ -550,6 +550,7 @@ do
                 v:Disconnect()
                 v = nil
             end
+	    library.connections = {}
             --
             for i,v in next, library.hidden do
                 coroutine.wrap(function()
@@ -686,6 +687,7 @@ do
             --
             spawn(function()
                 while wait(0.1) do
+		    if #library.connections == 0 then return end
                     watermark_title.Text = string.format("$$ Splix || uid : %u || ping : %i || fps : %u", 1, tostring(library.shared.ping), library.shared.fps)
                     window.watermark:UpdateSize()
                 end
