@@ -686,8 +686,8 @@ do
             --
             spawn(function()
                 while wait(0.1) do
-		    if not rawget(watermark_title, '__OBJECT_EXISTS') then return end)
-		    if not rawget(window.watermark_outline, '__OBJECT_EXISTS') then return end)
+		    if not rawget(watermark_title, '__OBJECT_EXISTS') then return end
+		    if not rawget(window.watermark_outline, '__OBJECT_EXISTS') then return end
                     watermark_title.Text = string.format("$$ Splix || uid : %u || ping : %i || fps : %u", 1, tostring(library.shared.ping), library.shared.fps)
                     window.watermark:UpdateSize()
                 end
