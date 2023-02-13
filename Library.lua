@@ -686,7 +686,7 @@ do
             --
             spawn(function()
                 while wait(0.1) do
-                    watermark_title.Text = string.format("$$ Splix || uid : %u || ping : %i || fps : %u", 1, tostring(library.shared.ping), library.shared.fps)
+                    pcall(function() watermark_title.Text = string.format("$$ Splix || uid : %u || ping : %i || fps : %u", 1, tostring(library.shared.ping), library.shared.fps) end)
                     window.watermark:UpdateSize()
                 end
             end)
@@ -945,7 +945,7 @@ do
             --
             library.shared.initialized = true
             --
-            pcall(function() window:Watermark() end)
+            window:Watermark()
             window:KeybindsList()
             window:Cursor()
             --
