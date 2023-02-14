@@ -982,8 +982,8 @@ do
             end
         end
         --
-        library.began[#library.began + 1] = function(Input)
-            if Input.KeyCode == window.uibind then
+        library.began[#library.began + 1] = function(Input, GPE)
+            if Input.KeyCode == window.uibind and not GPE then
                 window:Fade()
             end
             --[[
